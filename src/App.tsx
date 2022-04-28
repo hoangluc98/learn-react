@@ -1,14 +1,41 @@
 import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Person from './Person/Person';
+import { Person, PersonProps } from './Person/Person';
 import PersonForm from './Person/Form';
+
+type PersonType = Pick<PersonProps, 'name' | 'age'> & {
+  id: string | number;
+};
 
 function App() {
   const [name, setName] = useState<string>('');
+  const [persons, setPersons] = useState<PersonType[]>([
+    {
+      id: 1,
+      name: 'Hoang Luc',
+      age: 24
+    },
+    {
+      id: 2,
+      name: 'Hoang Chien',
+      age: 25
+    },
+    {
+      id: 3,
+      name: 'Le Tri',
+      age: 23
+    }
+  ]);
 
-  const handleClick = () => {
+  const handleClickPerson = () => {
     setName('Ahihi');
+  };
+
+  const handleDeletePerson = (index: number) => {
+    const tempPersons = [...persons];
+    tempPersons.splice(index, 1);
+    setPersons(tempPersons);
   };
 
   return (
@@ -26,12 +53,25 @@ function App() {
           Learn React
         </a>
 
-        <Person name="Hoang Luc" age="24" click={handleClick}>
+        <Person name="Hoang Luc" age="24" click={handleClickPerson}>
           My hobbies are ...
         </Person>
 
-        <h1>{name}</h1>
-        <button onClick={handleClick}>Click me</button>
+        {persons.map((person, index) => {
+          return (
+            <Person
+              key={person.id}
+              name={person.name}
+              age={person.age}
+              click={handleClickPerson}
+              delete={() => handleDeletePerson(index)}>
+              My hobbies are ...
+            </Person>
+          );
+        })}
+
+        {name && <h1>{name}</h1>}
+        <button onClick={handleClickPerson}>Click me</button>
 
         <PersonForm />
       </header>
