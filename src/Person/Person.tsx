@@ -1,4 +1,5 @@
 import React, { useState, FormEvent } from 'react';
+import './Person.css';
 
 type PersonProps = {
   name: string;

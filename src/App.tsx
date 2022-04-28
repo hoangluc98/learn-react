@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Person from './Person/Person';
+import PersonForm from './Person/Form';
 
 function App() {
   const [name, setName] = useState<string>('');
@@ -31,6 +32,8 @@ function App() {
 
         <h1>{name}</h1>
         <button onClick={handleClick}>Click me</button>
+
+        <PersonForm />
       </header>
     </div>
   );
