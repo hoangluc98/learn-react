@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import { Person, PersonProps } from './Person/Person';
 import PersonForm from './Person/Form';
+import ErrorBoundary from './ErrorBoundary/ErrorBoundary';
 
 type PersonType = Pick<PersonProps, 'name' | 'age'> & {
   id: string | number;
@@ -57,18 +58,20 @@ function App() {
           My hobbies are ...
         </Person>
 
-        {persons.map((person, index) => {
-          return (
-            <Person
-              key={person.id}
-              name={person.name}
-              age={person.age}
-              click={handleClickPerson}
-              delete={() => handleDeletePerson(index)}>
-              My hobbies are ...
-            </Person>
-          );
-        })}
+        <ErrorBoundary>
+          {persons.map((person, index) => {
+            return (
+              <Person
+                key={person.id}
+                name={person.name}
+                age={person.age}
+                click={handleClickPerson}
+                delete={() => handleDeletePerson(index)}>
+                My hobbies are ...
+              </Person>
+            );
+          })}
+        </ErrorBoundary>
 
         {name && <h1>{name}</h1>}
         <button onClick={handleClickPerson}>Click me</button>
