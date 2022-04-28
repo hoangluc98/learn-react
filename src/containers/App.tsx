@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
+import logo from 'logo.svg';
 import './App.css';
-import { Person, PersonProps } from './Person/Person';
-import PersonForm from './Person/Form';
-import ErrorBoundary from './ErrorBoundary/ErrorBoundary';
+import { Person, PersonProps } from 'components/Person/Person';
+import PersonForm from 'components/Person/Form';
+import ErrorBoundary from 'components/ErrorBoundary/ErrorBoundary';
 
 type PersonType = Pick<PersonProps, 'name' | 'age'> & {
   id: string | number;
@@ -72,9 +72,6 @@ function App() {
             );
           })}
         </ErrorBoundary>
-
-        {name && <h1>{name}</h1>}
-        <button onClick={handleClickPerson}>Click me</button>
 
         <PersonForm />
       </header>
