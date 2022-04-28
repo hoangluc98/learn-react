@@ -1,14 +1,15 @@
 import React, { useState, FormEvent } from 'react';
 import './Person.css';
 
-type PersonProps = {
+export type PersonProps = {
   name: string;
   age: number | string;
   children: React.ReactNode;
   click: () => void;
+  delete?: () => void;
 };
 
-function Person(props: PersonProps) {
+export function Person(props: PersonProps) {
   const [name, setName] = useState<string>('');
 
   const changeName = (e: FormEvent<HTMLInputElement>) => {
@@ -22,10 +23,9 @@ function Person(props: PersonProps) {
       </p>
       <p>{props.children}</p>
       <button onClick={props.click}>Click me</button>
+      {props.delete && <button onClick={props.delete}>Delete me</button>}
 
       <input value={name} type="text" onInput={changeName} />
     </div>
   );
 }
-
-export default Person;
