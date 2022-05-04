@@ -54,6 +54,8 @@ function App() {
           Learn React
         </a>
 
+        {name && <h1>{name}</h1>}
+
         <Person name="Hoang Luc" age="24" click={handleClickPerson}>
           My hobbies are ...
         </Person>
