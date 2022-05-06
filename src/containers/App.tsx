@@ -4,6 +4,7 @@ import './App.css';
 import { Person, PersonProps } from 'components/Person/Person';
 import PersonForm from 'components/Person/Form';
 import ErrorBoundary from 'components/ErrorBoundary/ErrorBoundary';
+import Timer from 'components/Timer/Timer';
 
 type PersonType = Pick<PersonProps, 'name' | 'age'> & {
   id: string | number;
@@ -76,6 +77,8 @@ function App() {
         </ErrorBoundary>
 
         <PersonForm />
+
+        <Timer />
       </header>
     </div>
   );
