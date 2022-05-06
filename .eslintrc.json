@@ -8,7 +8,8 @@
         "eslint:recommended",
         "plugin:react/recommended",
         "plugin:@typescript-eslint/recommended",
-        "plugin:prettier/recommended"
+        "plugin:prettier/recommended",
+        "plugin:react-hooks/recommended"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -20,13 +21,17 @@
     },
     "plugins": [
         "react",
-        "@typescript-eslint"
+        "@typescript-eslint",
+        "react-hooks"
     ],
     "rules": {
         "react/react-in-jsx-scope": "off",
-        "no-unused-vars": "off",
+        "no-unused-vars": "error",
         "react/jsx-uses-react": ["error"],
         "react/jsx-uses-vars": ["error"],
+        "react/display-name": ["off", { "ignoreTranspilerName": true }],
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn",
         "prettier/prettier": [
             "error",
             {
