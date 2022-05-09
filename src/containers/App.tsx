@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import logo from 'logo.svg';
 import './App.css';
-import { Person, PersonProps } from 'components/Person/Person';
-import PersonForm from 'components/Person/Form';
-import ErrorBoundary from 'components/ErrorBoundary/ErrorBoundary';
-import Timer from 'components/Timer/Timer';
+import { Person, PersonProps } from 'shared/components/Person/Person';
+import PersonForm from 'shared/components/Person/Form';
+import ErrorBoundary from 'shared/components/ErrorBoundary/ErrorBoundary';
+import Timer from 'shared/components/Timer/Timer';
 
 type PersonType = Pick<PersonProps, 'name' | 'age'> & {
   id: string | number;

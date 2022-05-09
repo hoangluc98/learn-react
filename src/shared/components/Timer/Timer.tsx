@@ -1,5 +1,5 @@
-import { useEffect } from 'react';
-import withTimer from 'hoc/WithTimer';
+import React, { useEffect } from 'react';
+import withTimer from 'shared/hoc/WithTimer';
 
 type TimerType = {
   count: number;
