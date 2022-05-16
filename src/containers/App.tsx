@@ -1,85 +1,16 @@
-import React, { useState } from 'react';
-import logo from 'logo.svg';
-import './App.css';
-import { Person, PersonProps } from 'shared/components/Person/Person';
-import PersonForm from 'shared/components/Person/Form';
-import ErrorBoundary from 'shared/components/ErrorBoundary/ErrorBoundary';
-import Timer from 'shared/components/Timer/Timer';
-
-type PersonType = Pick<PersonProps, 'name' | 'age'> & {
-  id: string | number;
-};
+import React from 'react';
+import { Link, Outlet } from 'react-router-dom';
 
 function App() {
-  const [name, setName] = useState<string>('');
-  const [persons, setPersons] = useState<PersonType[]>([
-    {
-      id: 1,
-      name: 'Hoang Luc',
-      age: 24
-    },
-    {
-      id: 2,
-      name: 'Hoang Chien',
-      age: 25
-    },
-    {
-      id: 3,
-      name: 'Le Tri',
-      age: 23
-    }
-  ]);
-
-  const handleClickPerson = () => {
-    setName('Ahihi');
-  };
-
-  const handleDeletePerson = (index: number) => {
-    const tempPersons = [...persons];
-    tempPersons.splice(index, 1);
-    setPersons(tempPersons);
-  };
-
   return (
     <div className="app">
-      <header className="app-header">
-        <img src={logo} className="app-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="app-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer">
-          Learn React
-        </a>
+      <h1>Hello World</h1>
+      <nav>
+        <Link to="/invoices">Invoices</Link>
+        <Link to="/expenses">Expenses</Link>
+      </nav>
 
-        {name && <h1>{name}</h1>}
-
-        <Person name="Hoang Luc" age="24" click={handleClickPerson}>
-          My hobbies are ...
-        </Person>
-
-        <ErrorBoundary>
-          {persons.map((person, index) => {
-            return (
-              <Person
-                key={person.id}
-                name={person.name}
-                age={person.age}
-                click={handleClickPerson}
-                delete={() => handleDeletePerson(index)}>
-                My hobbies are ...
-              </Person>
-            );
-          })}
-        </ErrorBoundary>
-
-        <PersonForm />
-
-        <Timer />
-      </header>
+      <Outlet />
     </div>
   );
 }
