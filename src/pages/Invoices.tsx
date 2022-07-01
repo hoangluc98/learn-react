@@ -1,6 +1,21 @@
 import React from 'react';
-import { data } from 'data/invoice';
 import { Link, Outlet } from 'react-router-dom';
+
+type Invoice = {
+  id: number;
+  name: string;
+};
+
+export const data: Invoice[] = [
+  {
+    id: 1,
+    name: 'Google'
+  },
+  {
+    id: 2,
+    name: 'Facebook'
+  }
+];
 
 const Invoices = () => {
   return (

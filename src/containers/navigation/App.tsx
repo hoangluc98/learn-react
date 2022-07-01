@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react';
-import { useAuth } from 'hook/useAuth';
+import { useAuth } from 'shared/hook/useAuth';
 import { Link, Outlet, useNavigate } from 'react-router-dom';
 
 const App = () => {

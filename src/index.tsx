@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 import Routers from 'router';
 import './index.css';
-import AuthProvider from 'hook/useAuth';
+import AuthProvider from 'shared/hook/useAuth';
 import { Provider } from 'react-redux';
 import { store } from 'reducers/store';
 

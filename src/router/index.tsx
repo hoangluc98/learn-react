@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 import RequiredAuth from './RequiredAuth';
-import App from 'containers/App';
+import App from 'containers/root/App';
 import Expenses from 'pages/Expenses';
 import Invoices from 'pages/Invoices';
 import Invoice from 'pages/Invoice';
