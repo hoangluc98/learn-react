@@ -2,8 +2,10 @@ import React, { useCallback, useState } from 'react';
 import { useAuth } from 'shared/hook/useAuth';
 import Template from 'shared/components/template/Template';
 import { Link, Outlet, useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const App = () => {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const { auth, setAuth } = useAuth();
   const [email, setEmail] = useState('');
@@ -39,7 +41,7 @@ const App = () => {
     <div className="app">
       <Template />
 
-      <h1>Hello World</h1>
+      <h1>{t('SignIn')}</h1>
 
       {auth && auth.email ? (
         <>

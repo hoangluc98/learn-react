@@ -6,15 +6,19 @@ import './index.css';
 import AuthProvider from 'shared/hook/useAuth';
 import { Provider } from 'react-redux';
 import { store } from 'reducers/store';
+import { I18nextProvider } from 'react-i18next';
+import i18next from 'shared/i18n';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <AuthProvider>
-        <Routers />
-      </AuthProvider>
-    </Provider>
+    <I18nextProvider i18n={i18next}>
+      <Provider store={store}>
+        <AuthProvider>
+          <Routers />
+        </AuthProvider>
+      </Provider>
+    </I18nextProvider>
   </React.StrictMode>
 );
 
