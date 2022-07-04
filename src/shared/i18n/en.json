@@ -1,4 +1,8 @@
 {
   "SignIn": "Sign in",
-  "LoginIn": "Login in"
+  "LoginIn": "Login in",
+  "CardInfo": "Card information",
+  "ExpirationDate": "Expiration date",
+  "Score": "Score",
+  "NoPointsYet": "No points yet"
 }

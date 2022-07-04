@@ -1,12 +1,24 @@
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --main-color: linear-gradient(104.32deg, #3681FF -60.37%, #FF00CA 113.98%);
+  --second-color: #4E3E26;
+  --second-color90: #5E3600;
+  --second-color80: #8A7D69;
+  --mine-shaft-radial: #242424;
+  --ktc: #BC101A;
+  --bg: #F9FAFB;
+  --bg1: #E5E5E5;
+  --Koala: #CCCCCC;
+}
+
 html, body {
   height: 100%;
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Mitr';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

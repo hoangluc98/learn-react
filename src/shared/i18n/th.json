@@ -1,4 +1,8 @@
 {
   "SignIn": "เข้าสู่ระบบ",
-  "LoginIn": "เข้าสู่ระบบ"
+  "LoginIn": "เข้าสู่ระบบ",
+  "CardInfo": "ข้อมูลบัตร",
+  "ExpirationDate": "วันหมดอายุ",
+  "Score": "คะแนน",
+  "NoPointsYet": "ยังไม่มีคะแนน"
 }

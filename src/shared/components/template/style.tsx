@@ -1,4 +1,4 @@
-import { makeStyles } from '@mui/styles';
+import { styled, makeStyles } from '@mui/styles';
 
 export const useStyles = makeStyles({
   container: {
@@ -39,5 +39,27 @@ export const useStyles = makeStyles({
 
   boxShowNone: {
     boxShadow: 'none !important'
+  }
+});
+
+export const StyledHeader = styled('div')({
+  display: 'grid',
+  width: '100%',
+  gridTemplateColumns: '29px 1fr 29px',
+  alignItems: 'center'
+});
+
+export const useHeaderStyles = makeStyles({
+  title: {
+    justifySelf: 'center',
+    gridColumnStart: '2',
+    color: 'var(--second-color)',
+    fontWeight: '500',
+    fontSize: '18px',
+    lineHeight: '22px'
+  },
+
+  right: {
+    justifySelf: 'right'
   }
 });
