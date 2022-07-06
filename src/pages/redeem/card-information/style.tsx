@@ -9,7 +9,7 @@ export const useStyles = makeStyles({
     position: 'relative',
     textAlign: 'center',
     width: 'fit-content',
-    margin: '0 auto'
+    margin: '0 auto 24px'
   },
 
   cardImage: {
@@ -65,6 +65,7 @@ export const useStyles = makeStyles({
   expire: {
     display: 'flex',
     justifyContent: 'space-between',
+    alignItems: 'center',
     padding: '4px 16px'
   },
   expireText: {
@@ -74,6 +75,7 @@ export const useStyles = makeStyles({
   },
 
   expireItem: {
+    height: '50px',
     backgroundColor: 'var(--white)',
     borderRadius: '8px',
     padding: '16px'
@@ -87,7 +89,7 @@ export const useStyles = makeStyles({
   expireItemNum: {
     fontWeight: '400',
     fontSize: '14px',
-    lineHeight: '22px',
+    lineHeight: '18px',
     color: 'var(--mine-shaft-radial)'
   },
 

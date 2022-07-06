@@ -12,7 +12,6 @@ export interface IProps {
 
   // Style
   headerHigh?: string;
-  footerHigh?: string;
   className?: string;
 }
 
@@ -21,10 +20,6 @@ const Template = (props: IProps) => {
 
   const headerStyle = {
     height: props.headerHigh || '52px'
-  };
-
-  const footerStyle = {
-    height: props.footerHigh || '65px'
   };
 
   return (
@@ -37,7 +32,6 @@ const Template = (props: IProps) => {
       <main className={classes.main}>{props.children}</main>
       {props.footer && (
         <footer
-          style={footerStyle}
           className={`${classes.footer} ${classes.headerFooter} ${
             props.hideFooterShadow ? classes.boxShowNone : ''
           }`}>

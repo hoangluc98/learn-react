@@ -20,20 +20,30 @@ export const useStyles = makeStyles({
     height: '100%',
     overflowX: 'hidden',
     overflowY: 'auto',
-    padding: '0 24px',
-    margin: '24px 0',
+    padding: '24px 16px',
 
-    /* Hide scrollbar for Chrome, Safari and Opera */
-    '&::-webkit-scrollbar': {
-      display: 'none'
+    '::-webkit-scrollbar': {
+      width: '10px'
     },
 
-    /* Hide scrollbar for IE, Edge and Firefox */
-    '-ms-overflow-style': 'none' /* IE and Edge */,
-    'scrollbar-width': 'none' /* Firefox */
+    /* Track */
+    '::-webkit-scrollbar-track': {
+      background: '#f1f1f1'
+    },
+
+    /* Handle */
+    '::-webkit-scrollbar-thumb': {
+      background: '#888'
+    },
+
+    /* Handle on hover */
+    '::-webkit-scrollbar-thumb:hover': {
+      background: '#555'
+    }
   },
 
   footer: {
+    padding: '16px',
     boxShadow: '0px 0px 8px rgb(0 0 0 / 20%)'
   },
 
@@ -57,6 +67,10 @@ export const useHeaderStyles = makeStyles({
     fontWeight: '500',
     fontSize: '18px',
     lineHeight: '22px'
+  },
+
+  left: {
+    justifySelf: 'left'
   },
 
   right: {

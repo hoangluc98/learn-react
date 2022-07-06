@@ -15,7 +15,7 @@ const resources = {
     translation: translationTH
   }
 };
-console.log('language', process.env.REACT_APP_DEFAULT_LANGUAGE);
+
 //i18N Initialization
 i18n.use(initReactI18next).init({
   resources,

@@ -3,7 +3,7 @@ import iconClose from 'assets/imgs/common/close.svg';
 
 const Close = (props: any) => {
   return (
-    <IconButton size="12" {...props}>
+    <IconButton size="small" {...props}>
       <img src={iconClose} alt="Close" loading="lazy" />
     </IconButton>
   );

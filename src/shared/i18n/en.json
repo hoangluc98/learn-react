@@ -4,5 +4,13 @@
   "CardInfo": "Card information",
   "ExpirationDate": "Expiration date",
   "Score": "Score",
-  "NoPointsYet": "No points yet"
+  "NoPointsYet": "No points yet",
+  "UseNumberPoints": "Use <span style='color: var(--purple);font-size: 16px;font-weight: 500;line-height: 20px;'>{{number}}</span> points",
+  "DetailsAndConditions": "Details and conditions",
+  "TermsOfUse": "Terms of Use",
+  "Details": "Details",
+  "Redeem_Term1": "Except for branches in the airport, Phi Phi Island, Impact Muang Thong, KidZania, PTT Motorway on the outbound side and PTT Motorway on the arrival side",
+  "Redeem_Term2": "Coke refill is for dine-in only",
+  "Redeem_Term3": "Prices may vary from area to area",
+  "RedeemPoints": "Redeem points"
 }

@@ -12,7 +12,7 @@ const Header = () => {
   const headerStyles = useHeaderStyles();
 
   function onClose() {
-    console.log('ahihi');
+    console.log('close');
   }
 
   return (

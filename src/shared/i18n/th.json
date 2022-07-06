@@ -4,5 +4,13 @@
   "CardInfo": "ข้อมูลบัตร",
   "ExpirationDate": "วันหมดอายุ",
   "Score": "คะแนน",
-  "NoPointsYet": "ยังไม่มีคะแนน"
+  "NoPointsYet": "ยังไม่มีคะแนน",
+  "UseNumberPoints": "ใช้ <span style='color: var(--purple);font-size: 16px;font-weight: 500;line-height: 20px;'>{{number}}</span> คะแนน",
+  "DetailsAndConditions": "รายละเอียดและเงื่อนไข",
+  "TermsOfUse": "เงื่อนไขการใช้งาน",
+  "Details": "รายละเอียด",
+  "Redeem_Term1": "ยกเว้น สาขาในสนามบิน, เกาะพีพี, อิมแพ็คเมืองทอง, คิดซาเนีย, พีทีที มอเตอร์เวย์ ฝั่งขาออก และพีทีที มอเตอร์เวย์ ฝั่งขาเข้า",
+  "Redeem_Term2": "โค้กรีฟิลเฉพาะทานที่ร้านเท่านั้น",
+  "Redeem_Term3": "ราคาอาจจะแตกต่างกันในแต่ละพื้นที่",
+  "RedeemPoints": "แลกคะแนน"
 }
