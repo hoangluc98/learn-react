@@ -26,20 +26,42 @@ export const useStyles = makeStyles({
   buttonIcon: {
     display: 'grid',
     placeItems: 'center'
+  },
+  buttonIconDisabled: {
+    opacity: '0.3',
+    filter: 'invert(0.5)'
   }
 });
 
-const ButtonNumber = () => {
+const ButtonNumber = (props: any) => {
   const classes = useStyles();
 
   return (
     <div className={classes.buttonContainer}>
-      <ButtonGradient variant="outlined" color="secondary" className={classes.buttonOperation}>
-        <img src={iconMinus} alt="Minus" loading="lazy" className={classes.buttonIcon} />
+      <ButtonGradient
+        {...props}
+        variant="outlined"
+        color="secondary"
+        className={classes.buttonOperation}>
+        <img
+          src={iconMinus}
+          alt="Minus"
+          loading="lazy"
+          className={`${classes.buttonIcon} ${props?.disabled && classes.buttonIconDisabled}`}
+        />
       </ButtonGradient>
       <span className={classes.buttonNumber}>1</span>
-      <ButtonGradient variant="outlined" color="secondary" className={classes.buttonOperation}>
-        <img src={iconPlus} alt="Plus" loading="lazy" className={classes.buttonIcon} />
+      <ButtonGradient
+        {...props}
+        variant="outlined"
+        color="secondary"
+        className={classes.buttonOperation}>
+        <img
+          src={iconPlus}
+          alt="Plus"
+          loading="lazy"
+          className={`${classes.buttonIcon} ${props?.disabled && classes.buttonIconDisabled}`}
+        />
       </ButtonGradient>
     </div>
   );

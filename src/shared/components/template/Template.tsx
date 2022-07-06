@@ -11,23 +11,16 @@ export interface IProps {
   hideFooterShadow?: boolean;
 
   // Style
-  headerHigh?: string;
   className?: string;
 }
 
 const Template = (props: IProps) => {
   const classes = useStyles();
 
-  const headerStyle = {
-    height: props.headerHigh || '52px'
-  };
-
   return (
     <div id="maai-template" className={`${classes.container} ${props.className}`}>
       {props.header && (
-        <header style={headerStyle} className={`${classes.header} ${classes.headerFooter}`}>
-          {props.header}
-        </header>
+        <header className={`${classes.header} ${classes.headerFooter}`}>{props.header}</header>
       )}
       <main className={classes.main}>{props.children}</main>
       {props.footer && (

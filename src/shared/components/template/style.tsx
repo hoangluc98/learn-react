@@ -13,7 +13,7 @@ export const useStyles = makeStyles({
   },
 
   header: {
-    padding: '16px'
+    padding: '8px'
   },
 
   main: {

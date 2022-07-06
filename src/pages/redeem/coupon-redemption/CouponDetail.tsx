@@ -70,7 +70,7 @@ const CardInformation = () => {
           <span className={classes.cardDate}>01-30 มิ.ย. 64</span>
           <div className={classes.cardPointGroup}>
             <span dangerouslySetInnerHTML={{ __html: t('UseNumberPoints', { number: 111 }) }} />
-            <ButtonNumber />
+            <ButtonNumber disabled />
           </div>
         </div>
       </div>

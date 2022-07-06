@@ -8,7 +8,7 @@ export const StyledButton = styled(Button)({
   backgroundImage: `linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, var(--gradient-start), var(--gradient-end))`,
   backgroundOrigin: 'border-box',
   backgroundClip: 'content-box, border-box',
-  textTransform: 'capitalize'
+  textTransform: 'capitalize !important' as any
 });
 
 export const useStyles = makeStyles({
@@ -36,6 +36,11 @@ const ButtonGradient = (props: any) => {
   const styledButton: any = {};
   if (props?.variant === 'outlined') {
     styledButton['box-shadow'] = '2px 1000px 1px #fff inset';
+  }
+
+  if (props?.disabled) {
+    styledButton['background'] = 'none';
+    styledButton['background-color'] = 'var(--grey2)';
   }
 
   return (
