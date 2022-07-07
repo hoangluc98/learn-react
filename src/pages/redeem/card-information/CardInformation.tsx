@@ -1,8 +1,8 @@
 import React from 'react';
-import Template from 'shared/components/template/Template';
+import Template from 'containers/template/Template';
 import IconClose from 'shared/components/icon/Close';
 import { useStyles } from './style';
-import { StyledHeader, useHeaderStyles } from 'shared/components/template/style';
+import { StyledHeader, useHeaderStyles } from 'containers/template/style';
 import { useTranslation } from 'react-i18next';
 import imgCardInfo from 'assets/imgs/redeem/card-maai.svg';
 import imgNoPoints from 'assets/imgs/redeem/no-points.svg';

@@ -1,10 +1,12 @@
 import React from 'react';
 import { useStyles } from './style';
 import { useTranslation } from 'react-i18next';
-import Template from 'shared/components/template/Template';
+import Template from 'containers/template/Template';
+import BackdropContainer from 'containers/backdrop/Backdrop';
 import ButtonNumber from 'shared/components/common/ButtonNumber';
 import ButtonGradient, { useFooterStyles } from 'shared/components/common/ButtonGradient';
-import { StyledHeader, useHeaderStyles } from 'shared/components/template/style';
+import CircleProgressGradient from 'shared/components/common/CircleProgressGradient';
+import { StyledHeader, useHeaderStyles } from 'containers/template/style';
 
 import IconLeft from 'shared/components/icon/ArrowLeft';
 import iconStar from 'assets/imgs/redeem/star-score.svg';
@@ -96,6 +98,9 @@ const CardInformation = () => {
           </div>
         </div>
       </div>
+      <BackdropContainer isOpen={false} closable>
+        <CircleProgressGradient />
+      </BackdropContainer>
     </Template>
   );
 };

@@ -35,12 +35,12 @@ const Text = (props: any) => {
 const ButtonGradient = (props: any) => {
   const styledButton: any = {};
   if (props?.variant === 'outlined') {
-    styledButton['box-shadow'] = '2px 1000px 1px #fff inset';
+    styledButton['boxShadow'] = '2px 1000px 1px #fff inset';
   }
 
   if (props?.disabled) {
     styledButton['background'] = 'none';
-    styledButton['background-color'] = 'var(--grey2)';
+    styledButton['backgroundColor'] = 'var(--grey2)';
   }
 
   return (
